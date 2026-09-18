@@ -47,3 +47,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     email TEXT,
     numero TEXT
 );
+
+INSERT INTO usuarios (nome, email, numero)
+VALUES (?, ?, ?);
+
+SELECT * FROM usuarios;
