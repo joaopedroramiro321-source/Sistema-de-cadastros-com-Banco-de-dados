@@ -6,27 +6,9 @@ class Cadastro:
         self.__email = email
         self.__numero = numero
 
-    def get_nome(self):
-        return self.__nome
-    def set_nome(self, nome):
-        self.__nome = nome
-        return self.__nome
-
-    def get_email(self):
-        return self.__email
-    def set_email(self, email):
-        self.__email = email
-        return self.__email
-
-    def get_numero(self):
-        return self.__numero
-    def set_numero(self, numero):
-        self.__numero = numero
-        return self.__numero
-
     def criar_banco(self):
 
-        conexao = sql.connect(r'C:\Users\joaoramiro\Desktop\Dev\Meus-Projetos\Portifólio\Cadastros POO\banco.db')
+        conexao = sql.connect('banco.db')
         cursor = conexao.cursor()
 
         cursor.execute('''
@@ -42,7 +24,7 @@ class Cadastro:
 
     def cadastrar(self, nome, numero, email):
 
-        conexao = sql.connect(r'C:\Users\joaoramiro\Desktop\Dev\Meus-Projetos\Portifólio\Cadastros POO\banco.db')
+        conexao = sql.connect('banco.db')
         cursor = conexao.cursor()
 
         nome = input('Informe seu nome: ')
@@ -59,7 +41,7 @@ class Cadastro:
 
     def ver_registros(self):
 
-        conexao = sql.connect(r'C:\Users\joaoramiro\Desktop\Dev\Meus-Projetos\Portifólio\Cadastros POO\banco.db')
+        conexao = sql.connect('banco.db')
         cursor = conexao.cursor()
 
         # Ver todos os registros
