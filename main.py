@@ -6,7 +6,7 @@ escolha = 0
 
 print('''
 =============================
-SISTEMA DE CADASROS INICIADO
+SISTEMA DE CADASTROS INICIADO
 =============================
 ''')
 
